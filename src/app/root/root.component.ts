@@ -2,14 +2,16 @@ import { Component } from '@angular/core';
 
 @Component({
     selector: 'app-tree-root',
-    templateUrl: './root.component.html'
+    templateUrl: './root.component.html',
+    styleUrls: ['./root.component.css']
 })
 export class RootComponent {
-    rootText = 'Root Text';
+
+    rootText = 'Root';
     isDisabled = false;
     inputValue = 'val';
     showRoot = true;
-    factories = ['Factory 1', 'Factory 2', 'Factory 3'];
+    factories = [];
 
     constructor() {
         setTimeout(() => {
@@ -22,13 +24,31 @@ export class RootComponent {
         return this.rootText;
     }
 
+    genId() {
+        function s4() {
+            return Math.floor((1 + Math.random()) * 0x10000)
+              .toString(16)
+              .substring(1);
+        }
+        return s4() + s4() + '-' + s4() + '-' + s4() + '-' + s4() + '-' + s4() + s4() + s4();
+    }
+
     onAddFactoryClick(evt) {
         console.log(evt.target);
         console.log('click');
-        this.factories.push('Factory ' + (this.factories.length + 1));
+        const currentTime = new Date();
+        this.factories.push(this.genId());
     }
 
     inputHandler(evt) {
         this.inputValue = evt.target.value;
+    }
+
+    handleRemoveFactory(evt) {
+        console.log(evt);
+        const id = evt;
+        const index = this.factories.indexOf(id);
+        console.log(index);
+        this.factories.splice(index, 1);
     }
 }

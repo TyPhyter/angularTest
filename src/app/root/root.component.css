@@ -1,0 +1,12 @@
+.factoryContainer {
+    border-left: 3px dashed black;
+}
+
+h2 {
+    /* display: inline-block; */
+    margin-bottom: 0px;
+}
+.addFactory {
+    /* display: inline-block; */
+    margin-bottom: 10px;
+}

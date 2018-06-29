@@ -1,7 +1,21 @@
-<div *ngIf="showRoot">
+<div class="container">
     <h2>{{ getRootText() }}</h2>
-    <input type="text" [(ngModel)]="inputValue">
-    <div>{{ inputValue }}</div>
-    <button id="addFactory" class="btn btn-primary" [disabled]="isDisabled" (click)="onAddFactoryClick($event)">ADD FACTORY</button>
-    <p *ngFor="let factory of factories; let i = index;">{{ factory + ' ' +  i }}</p>
+    <button id="addFactory" class="btn btn-sm btn-primary" [disabled]="isDisabled" (click)="onAddFactoryClick($event)">ADD FACTORY</button>
+    <div class="container">
+
+        <div class="factoryContainer">
+            <div *ngIf="showRoot">
+
+                <!-- <input type="text" [(ngModel)]="inputValue">
+                    <div>{{ inputValue }}</div> -->
+
+                <!-- Here we're binding the factory property of each app-factory element to the factory represented by factory of factories -->
+                <app-factory *ngFor="let factory of factories; let i = index;" 
+                    [factory]="factory" 
+                    (factoryToRemove)="handleRemoveFactory($event)">
+                </app-factory>
+            </div>
+        </div>
+
+    </div>
 </div>

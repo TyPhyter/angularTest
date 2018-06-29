@@ -5,11 +5,13 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { RootComponent } from './root/root.component';
+import { FactoryComponent } from './factory/factory.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RootComponent
+    RootComponent,
+    FactoryComponent
   ],
   imports: [
     BrowserModule,
