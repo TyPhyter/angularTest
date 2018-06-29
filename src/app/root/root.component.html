@@ -1,6 +1,10 @@
 <div class="container">
-    <h2>{{ getRootText() }}</h2>
-    <button id="addFactory" class="btn btn-sm btn-primary" [disabled]="isDisabled" (click)="onAddFactoryClick($event)">ADD FACTORY</button>
+    <div class="root">
+        <div class="container">
+            <h2>{{ getRootText() }}</h2>
+            <button id="addFactory" class="btn btn-sm btn-primary" [disabled]="isDisabled" (click)="onAddFactoryClick($event)">ADD FACTORY</button>
+        </div>    
+    </div>
     <div class="container">
 
         <div class="factoryContainer">

@@ -1,5 +1,13 @@
 .factoryContainer {
     border-left: 3px dashed black;
+    margin-left: 10%;
+}
+
+.root {
+    background: #333;
+    border: 1px solid #222;
+    height: 100px;
+    color: white;
 }
 
 h2 {
