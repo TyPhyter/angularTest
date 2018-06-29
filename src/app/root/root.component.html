@@ -1,0 +1,7 @@
+<div *ngIf="showRoot">
+    <h2>{{ getRootText() }}</h2>
+    <input type="text" [(ngModel)]="inputValue">
+    <div>{{ inputValue }}</div>
+    <button id="addFactory" class="btn btn-primary" [disabled]="isDisabled" (click)="onAddFactoryClick($event)">ADD FACTORY</button>
+    <p *ngFor="let factory of factories; let i = index;">{{ factory + ' ' +  i }}</p>
+</div>
