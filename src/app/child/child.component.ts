@@ -52,7 +52,7 @@ export class ChildComponent implements OnInit {
         const now = new Date();
         if( now > this.startTime && now < this.endTime){
             this.active = true;
-        } else {
+        }else {
             this.active = false;
         }
     }

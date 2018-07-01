@@ -18,3 +18,9 @@ h2 {
     /* display: inline-block; */
     margin-bottom: 10px;
 }
+
+@media screen and (max-width: 992px) {
+    .factoryContainer {
+        margin-left: 5%;
+    }
+}

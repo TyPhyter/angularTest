@@ -4,7 +4,7 @@
         ---{{ child.value }}
     </span>
     <span class="times">
-        <span class="text-success ml-5">
+        <span class="text-success ml-3">
             Start: {{ startTime | date:"shortTime"}}
         </span>
         <span class="text-danger ml-1">
@@ -19,7 +19,7 @@
         ---{{ child.value }}
     </span>
     <span class="times">
-        <span class="text-success ml-5">
+        <span class="text-success ml-3">
             Start: {{ startTime | date:"shortTime"}}
         </span>
         <span class="text-danger ml-1">
@@ -34,7 +34,7 @@
         ---{{ child.value }}
     </span>
     <span class="editTimes">
-        <span class="text-success ml-5">
+        <span class="text-success ml-3">
             <input [ngModel]="startTime | date:'HH:mm'" (ngModelChange)="startTimeChange($event)" type="time" name="startTime" required/>
         </span>
         <span class="text-danger ml-1">
@@ -52,7 +52,7 @@
             ---{{ child.value }}
         </span>
         <span class="editTimes">
-            <span class="text-success ml-5">
+            <span class="text-success ml-3">
                 <input [ngModel]="startTime | date:'HH:mm'" (ngModelChange)="startTimeChange($event)" type="time" name="startTime" required/>
             </span>
             <span class="text-danger ml-1">

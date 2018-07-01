@@ -34,3 +34,17 @@ label {
     margin: 0px 10px;
     cursor: pointer;
 }
+
+@media screen and (max-width: 992px) {
+    .range {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .icon {
+        margin-right: 5px;
+    }
+    button {
+        display: block;
+        margin-left: 5px !important;
+    }
+}

@@ -1,13 +1,15 @@
 <div *ngIf="finishedEditing">
     <div class="factory">
-        <span (click)="editFactory()"><div class="factoryName">---{{ name }}</div></span>
+        <span (click)="editFactory()">
+            <div class="factoryName">---{{ name }}</div>
+        </span>
         <span class="range badge badge-info">
             <span>Range: </span>
             <span>{{ lowerBound }}</span>
             <span> -> </span>
             <span>{{ upperBound }}</span>
         </span>
-        <span>
+        <span class="factoryIcons">
             <img class="icon" src="assets/icons/refresh.png" (click)="generateChildren()">
             <img class="icon" src="assets/icons/edit.png" (click)="editFactory()">
             <img class="icon" src="assets/icons/delete.png" (click)="removeFactory()">
@@ -19,19 +21,22 @@
 </div>
 <div *ngIf="!finishedEditing">
     <div class="factory">
-        <span><strong>---</strong><input type="text" [(ngModel)]="name" placeholder={{this.name}}></span>
         <span>
-            
+            <strong>---</strong>
+            <input type="text" [(ngModel)]="name" placeholder={{this.name}}>
+        </span>
+        <span>
+
             <span class="ml-5">
                 <label>
                     Lower Bound
-                    <input class="rangeInput" type="text" [(ngModel)]="lowerBound" >
+                    <input class="rangeInput" type="text" [(ngModel)]="lowerBound">
                 </label>
             </span>
             <span>
                 <label>
                     Upper Bound
-                    <input class="rangeInput" type="text" [(ngModel)]="upperBound" >
+                    <input class="rangeInput" type="text" [(ngModel)]="upperBound">
                 </label>
             </span>
             <span>
