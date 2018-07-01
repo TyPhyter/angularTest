@@ -1,0 +1,15 @@
+.child:hover {
+    cursor: pointer;
+}
+
+.child .times {
+    visibility: hidden;
+}
+
+.child:hover .times {
+    visibility: visible;
+}
+
+.strikethrough {
+    text-decoration: strikethrough;
+}

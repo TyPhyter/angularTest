@@ -6,12 +6,14 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { RootComponent } from './root/root.component';
 import { FactoryComponent } from './factory/factory.component';
+import { ChildComponent } from './child/child.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RootComponent,
-    FactoryComponent
+    FactoryComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,

@@ -53,10 +53,13 @@ export class FactoryComponent implements OnInit {
     }
 
     generateChildren() {
+        //remove children on each generatione
         this.children = [];
-        for (let i = 0; i < this.numChildren; i++) {
-            this.children.push({ value: Math.floor(Math.random() * (this.upperBound - this.lowerBound)) + this.lowerBound })
+
+        for (let i = 0; i < this.numChildren; i++) { 
+            this.children.push({ 
+                value: Math.floor(Math.random() * (this.upperBound - this.lowerBound)) + this.lowerBound
+            });
         }
     }
-
 }

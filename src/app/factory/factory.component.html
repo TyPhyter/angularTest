@@ -13,7 +13,7 @@
             <img class="icon" src="assets/icons/delete.png" (click)="removeFactory()">
         </span>
         <div class="childContainer">
-            <div *ngFor="let child of children;">---{{ child.value }}</div>
+            <app-factory-child *ngFor="let child of children;" [child]="child"></app-factory-child>
         </div>
     </div>
 </div>

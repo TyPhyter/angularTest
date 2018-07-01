@@ -1,0 +1,65 @@
+<!-- Active and not editing -->
+<div *ngIf="active && finishedEditing" class="child" (click)="handleClick($event)">
+    <span>
+        ---{{ child.value }}
+    </span>
+    <span class="times">
+        <span class="text-success ml-5">
+            Start: {{ startTime | date:"shortTime"}}
+        </span>
+        <span class="text-danger ml-1">
+            End: {{ endTime | date:"shortTime"}}
+        </span>
+    </span>
+</div>
+
+<!-- Not editing but inactive -->
+<div *ngIf="!active && finishedEditing" class="child text-danger strikethrough" (click)="handleClick($event)">
+    <span>
+        ---{{ child.value }}
+    </span>
+    <span class="times">
+        <span class="text-success ml-5">
+            Start: {{ startTime | date:"shortTime"}}
+        </span>
+        <span class="text-danger ml-1">
+            End: {{ endTime | date:"shortTime"}}
+        </span>
+    </span>
+</div>
+
+<!--  Active but still editing-->
+<div *ngIf="active && !finishedEditing" class="child" (click)="handleClick($event)">
+    <span>
+        ---{{ child.value }}
+    </span>
+    <span class="editTimes">
+        <span class="text-success ml-5">
+            <input [ngModel]="startTime | date:'HH:mm'" (ngModelChange)="startTimeChange($event)" type="time" name="startTime" required/>
+        </span>
+        <span class="text-danger ml-1">
+            <input [ngModel]="endTime | date:'HH:mm'" (ngModelChange)="endTimeChange($event)" type="time" name="endTime" required/>
+        </span>
+        <span class="ml-2">
+            <button class="btn btn-sm ml-5" (click)="saveChild()">Save</button>
+        </span>
+    </span>
+</div>
+
+<!-- Inactive and still editing -->
+<div *ngIf="!active && !finishedEditing" class="child text-danger strikethrough" (click)="handleClick($event)">
+        <span>
+            ---{{ child.value }}
+        </span>
+        <span class="editTimes">
+            <span class="text-success ml-5">
+                <input [ngModel]="startTime | date:'HH:mm'" (ngModelChange)="startTimeChange($event)" type="time" name="startTime" required/>
+            </span>
+            <span class="text-danger ml-1">
+                <input [ngModel]="endTime | date:'HH:mm'" (ngModelChange)="endTimeChange($event)" type="time" name="endTime" required/>
+            </span>
+            <span class="ml-2">
+                <button class="btn btn-sm ml-5" (click)="saveChild()">Save</button>
+            </span>
+        </span>
+    </div>
