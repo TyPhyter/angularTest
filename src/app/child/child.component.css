@@ -10,10 +10,6 @@
     visibility: visible;
 }
 
-.strikethrough {
-    text-decoration: strikethrough;
-}
-
 @media screen and (max-width: 992px) {
     .child .times {
         visibility: visible;

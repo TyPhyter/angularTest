@@ -1,6 +1,6 @@
 .factoryContainer {
     border-left: 3px dashed black;
-    margin-left: 10%;
+    width: 80%;
 }
 
 .root {
@@ -11,16 +11,14 @@
 }
 
 h2 {
-    /* display: inline-block; */
     margin-bottom: 0px;
 }
 .addFactory {
-    /* display: inline-block; */
     margin-bottom: 10px;
 }
 
 @media screen and (max-width: 992px) {
     .factoryContainer {
-        margin-left: 5%;
+        width: 90%;
     }
 }

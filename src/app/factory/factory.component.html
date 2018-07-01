@@ -1,52 +1,64 @@
-<div *ngIf="finishedEditing">
-    <div class="factory">
-        <span (click)="editFactory()">
+<div *ngIf="finishedEditing container">
+    <div class="factory row">
+        <div (click)="editFactory()" class="col-12 col-sm-4 pl-0">
             <div class="factoryName">---{{ name }}</div>
-        </span>
-        <span class="range badge badge-info">
-            <span>Range: </span>
-            <span>{{ lowerBound }}</span>
-            <span> -> </span>
-            <span>{{ upperBound }}</span>
-        </span>
-        <span class="factoryIcons">
-            <img class="icon" src="assets/icons/refresh.png" (click)="generateChildren()">
-            <img class="icon" src="assets/icons/edit.png" (click)="editFactory()">
-            <img class="icon" src="assets/icons/delete.png" (click)="removeFactory()">
-        </span>
-        <div class="childContainer">
-            <app-factory-child *ngFor="let child of children;" [child]="child"></app-factory-child>
+        </div>
+        <div class="col-12 col-sm-4">
+            <div class="range badge badge-info">
+                    <span>Range: </span>
+                    <span>{{ lowerBound }}</span>
+                    <span> -> </span>
+                    <span>{{ upperBound }}</span>
+            </div>
+        </div>
+        <div class="factoryIcons col-12 col-sm-4">
+            <div class="row">
+                <div class="col-4">
+                    <img class="icon" src="assets/icons/refresh.png" (click)="generateChildren()">
+                </div>
+                <div class="col-4">
+                    <img class="icon" src="assets/icons/edit.png" (click)="editFactory()">
+                </div>
+                <div class="col-4">
+                    <img class="icon" src="assets/icons/delete.png" (click)="removeFactory()">
+                </div>
+            </div>
+        </div>
+        <div class="childContainer container">
+            <app-factory-child *ngFor="let child of children;" [child]="child" class=""></app-factory-child>
         </div>
     </div>
 </div>
-<div *ngIf="!finishedEditing">
-    <div class="factory">
-        <span>
+<div *ngIf="!finishedEditing container">
+    <div class="factory row">
+        <div class="col-12 pl-0">
             <strong>---</strong>
-            <input type="text" [(ngModel)]="name" placeholder={{this.name}}>
-        </span>
-        <span>
-
-            <span class="ml-5">
+            <label>
+                <input type="text" [(ngModel)]="name" placeholder={{this.name}}>
+            </label>
+            
+        </div>
+        <div class="col-12">
+            <span class="col-6 col-sm-4">
                 <label>
                     Lower Bound
                     <input class="rangeInput" type="text" [(ngModel)]="lowerBound">
                 </label>
             </span>
-            <span>
+            <span class="col-6 col-sm-4">
                 <label>
                     Upper Bound
                     <input class="rangeInput" type="text" [(ngModel)]="upperBound">
                 </label>
             </span>
-            <span>
+            <span class="col-6 col-sm-4">
                 <label>
                     Number of Children
                     <input class="rangeInput" type="text" [(ngModel)]="numChildren">
                 </label>
             </span>
-        </span>
-        <button class="btn btn-sm ml-5" (click)="saveFactory()">Save</button>
-        <button class="btn btn-sm btn-danger" (click)="removeFactory()">Delete</button>
+        </div>
+        <button class="btn btn-sm ml-5 mb-2" (click)="saveFactory()">Save</button>
+        <button class="btn btn-sm btn-danger mb-2" (click)="removeFactory()">Delete</button>
     </div>
 </div>

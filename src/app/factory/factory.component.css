@@ -1,50 +1,22 @@
-
-.rangeInput {
-    width: 50px;
-}
-
-.childContainer {
-    margin-left: 20px;
-    border-left: 2px dashed black;
-}
-
-.factory {
-    margin-top: 20px;
-    font-size: 12px;
-}
-
 .factoryName {
     font-size: 20px;
     font-weight: bold;
-    display: inline-block;
+    /* display: inline-block; */
 }
 
-.range {
-    margin-left: 20px;
-    margin-right: 20px;
+.childContainer {
+    width: 90%;
+    border-left: 2px dashed black;
 }
 
-label {
-    margin-right: 10px;
+.noLeftPadding {
+    margin-left: 0 !important;
 }
 
-.icon {
-    width: 12px;
-    height: auto;
-    margin: 0px 10px;
-    cursor: pointer;
+.factory {
+    margin-bottom: 10px;
 }
 
-@media screen and (max-width: 992px) {
-    .range {
-        margin-left: 10px;
-        margin-right: 10px;
-    }
-    .icon {
-        margin-right: 5px;
-    }
-    button {
-        display: block;
-        margin-left: 5px !important;
-    }
+.factoryIcons {
+    margin-bottom: 5px;
 }
