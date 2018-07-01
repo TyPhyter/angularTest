@@ -5,10 +5,10 @@
         </div>
         <div class="col-12 col-sm-4">
             <div class="range badge badge-info">
-                    <span>Range: </span>
-                    <span>{{ lowerBound }}</span>
-                    <span> -> </span>
-                    <span>{{ upperBound }}</span>
+                <span>Range: </span>
+                <span>{{ lowerBound }}</span>
+                <span> -> </span>
+                <span>{{ upperBound }}</span>
             </div>
         </div>
         <div class="factoryIcons col-12 col-sm-4">
@@ -36,27 +36,29 @@
             <label>
                 <input type="text" [(ngModel)]="name" placeholder={{this.name}}>
             </label>
-            
+
         </div>
         <div class="col-12">
-            <span class="col-6 col-sm-4">
-                <label>
-                    Lower Bound
-                    <input class="rangeInput" type="text" [(ngModel)]="lowerBound">
-                </label>
-            </span>
-            <span class="col-6 col-sm-4">
-                <label>
-                    Upper Bound
-                    <input class="rangeInput" type="text" [(ngModel)]="upperBound">
-                </label>
-            </span>
-            <span class="col-6 col-sm-4">
-                <label>
-                    Number of Children
-                    <input class="rangeInput" type="text" [(ngModel)]="numChildren">
-                </label>
-            </span>
+            <div class="row">
+                <span class="col-6 col-sm-4">
+                    <label>
+                        Lower Bound
+                        <input class="rangeInput" type="text" [(ngModel)]="lowerBound">
+                    </label>
+                </span>
+                <span class="col-6 col-sm-4">
+                    <label>
+                        Upper Bound
+                        <input class="rangeInput" type="text" [(ngModel)]="upperBound">
+                    </label>
+                </span>
+                <span class="col-6 col-sm-4">
+                    <label>
+                        Number of Children
+                        <input class="rangeInput" type="text" [(ngModel)]="numChildren">
+                    </label>
+                </span>
+            </div>
         </div>
         <button class="btn btn-sm ml-5 mb-2" (click)="saveFactory()">Save</button>
         <button class="btn btn-sm btn-danger mb-2" (click)="removeFactory()">Delete</button>
